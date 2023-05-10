@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="../static/css/Sign_Up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>  
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+        <!-- code for login -->
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            
+                <!-- param for email -->
+                <div class ="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" id="checkUserName"> <label>Username</label>
+                </div>
+                <!-- param for pwd -->
+                <div class ="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="checkPwd"> <label>Password</label>
+                </div>
+                
+                <button type="submit" class="btn" onclick="authorise()">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="../templates/Sign_up_page.html" class="register-link">Register</a></p>
+                </div>
+           
+        </div>
+
+        <!--  -->
+
+
+    </div>
+
+    <script src="../static/js/Login.js"></script>
+    <!-- script to add icons to input boxes -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

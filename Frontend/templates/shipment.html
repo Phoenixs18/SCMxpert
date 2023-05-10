@@ -1,0 +1,53 @@
+<html>
+    <link rel="stylesheet" href="../static/css/Ship_Page.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<div class="wrapper">
+  <div class="container">
+    <form action="">
+
+      <div id="sidebar" class="sidebar">
+
+        <a href="../templates/dashboard.html">Home</a>
+        <a href="../templates/login_page.html" button type="button" onclick="logout()">Logout</a>
+    </div>
+        <!-- <h1> <img class="ship logo" src="delivery-truck.png" alt="Shipping container">Shipping Details</h1> -->
+        <h1>
+          <img class="ship logo" src="../asserts/delivery-truck.png"></i>
+          Shipping Details
+
+      </h1>
+        <body>
+
+
+
+         <div class="details">
+            <label><b>Shipment/Invoice Number:</b></label> <input type ="id" id="sino" class="info" placeholder="Shipment/Invoice Number"><br>
+            <label><b>Container Number:</b></label> <input type="id" id="cno" class="info" placeholder="Container Number"><br>
+            <label><b>Shipment Description:</b> </label><input type="text" id="sd" class="info" placeholder="Enter Your Description"><br>
+            <label><b>Route Details:</b></label> <select class="dropdown"> <option value="Select Route">Select Route</option> <option> <a href=""> </a></option><option><a href=""> </a></option><option><a href=""> </a></option> </select><br>
+            <label><b>Goods Type:</b></label> <select class="dropdown"> <option value="Select Goods">Select Goods</option> <option> <a href="Machinery">Machinery</a></option><option><a href="Livestock">Livestock</a></option><option><a href="Fuel">Fuel</a></option> </select><br>
+            <label><b>Device:</b></label> <select class="dropdown"> <option value="Select Device">Select Device</option> <option> <a href=""> </a></option><option><a href=""> </a></option><option><a href=""> </a></option> </select><br>
+            <label><b>Expected Delivery Date:</b></label> <input type="date" class="info" placeholder="Expected Delivery Date"><br>
+            <label><b>PO Number:</b></label> <input type="id" class="info" placeholder="PONumber"><br>
+            <label><b>Delivery Number:</b></label> <input type="id" class="info" placeholder="DeliveryNumber"><br>
+            <label><b>NDC Number:</b></label> <input type="id" class="info" placeholder="NDCNumber"><br>
+            <label><b>Batch Id:</b></label> <input type="id" class="info" placeholder="Batch Id"><br>
+            <label><b>Serial Number of goods:</b></label> <input type="id" class="info" placeholder="Serial Number of goods"><br>
+         </div>
+
+         <div class="btns">
+            <button id="button1">Submit</button>
+            <button id="button2">Cancel</button>
+         </div>
+        
+        
+         <script src="../static/js/Shipments.js"></script>
+         <script src="Home.js"></script>
+
+        </body>
+    </form>
+  </div>
+</div>
+</html>

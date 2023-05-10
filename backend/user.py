@@ -1,12 +1,14 @@
 from pydantic import BaseModel ##to request body from user
 from mongoengine import Document, StringField, IntField, DateField, DynamicDocument
-#from fastapi import Query
+from fastapi import Query
 
 
 class NewUser(BaseModel):
     username:str 
     email:str 
-    password: str 
+    password: str = Query(
+        regex='(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$'
+    ) 
 
 
 class UserInDB(NewUser):
@@ -22,7 +24,7 @@ class Token(BaseModel):
     
 
 class TokenData(BaseModel):
-    username: str | None = None
+    username: str = None
 
 class NewShipment(BaseModel):
     invoice_no: int
