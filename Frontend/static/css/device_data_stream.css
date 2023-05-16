@@ -1,0 +1,106 @@
+/* body{
+    background-color: #2e7be0;
+} */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../../asserts/data_stream.png) no-repeat;
+    background-size: cover ;
+    background-position: center;
+  }
+
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+}
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+   
+  }
+  
+  .navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+
+  .navigation a:hover::after{
+    transform: scaleX(1);
+    color:white;
+  }
+
+.card {
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+    background-color:#929ba5;
+    box-shadow: rgb(0 0 0 / 46%) 0px 4px 12px;
+    padding: 2.5%;
+    padding-bottom: 2.5%;
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card .btn-group{
+    display: inline-block;
+}
+
+.card .button{
+    /* margin: 10px 20px; */
+    height: 40px;
+    background-color: rgba(7, 3, 39, 0.884);
+    border-width: 0px;
+    font-size:x-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.card .button:hover{
+    background-color:rgba(231, 206, 233, 0.774);
+    color: #2e2323de;
+}
+
+.styled-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    content: center;
+  }
+  
+  .styled-table tr, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }

@@ -4,18 +4,20 @@
         <!-- calling Bootstrap and API packages into HTML pages -->
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../static/css/DeviceDataStream.css">
+        <link rel="stylesheet" href="../static/css/device_data_stream.css">
         <!-- <link rel="stylesheet" href="../static/css/Home.css"> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
     <!-- checks if the token is valid -->
     <body>
-        <div id="sidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn"></a>
-            <a href="../templates/dashboard.html">Home</a>
-            <a href="../templates/login_page.html" button type="button">Logout</a>
-        </div>
->
+        <header>
+            <img class="logo" src="../asserts/SCMXpert logo.png" alt="SCMXpert logo" style="width:200px;height:65px;">
+            <nav class="navigation">
+                <a href="../templates/dashboard.html" button class="btn"><span class="icon"><ion-icon name="home"></ion-icon></span> Home</a>
+          <a href="../templates/login.html" button class="btn"><span class="icon"><ion-icon name="log-out"></ion-icon></span> Logout</a>
+            </nav>
+        </header>
+
         <div class="card">
             <div class="col-auto">
                 <button type="submit" class="button" id="btn" onclick="devicedata()">Load Data</button>
@@ -33,8 +35,12 @@
                 <tbody id = "data">
                 </tbody>
             </table>
-            <script src="../static/js/DeviceDataStream.js"></script>
+            <script src="../static/js/device_data_stream.js"></script>
             
         </div>
+
+            <!-- script to add icons to input boxes -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

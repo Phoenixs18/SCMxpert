@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="../static/css/sign_up.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>  
+</head>
+
+<body>
+   
+    <div class="wrapper">
+        <!-- <span class="icon-close"><ion-icon name="close"></ion-icon></span> -->
+
+
+        <!--code for register -->
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            
+                <!-- param for username -->
+                <div class ="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text"  id="typeUserName"> <label class="input_label">Username</label>
+                 </div>
+
+                <!-- param for email -->
+                <div class ="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email"  id="typeEmail"> <label class="input_label">Email</label>
+                </div>
+
+                <!-- param for pwd -->
+                <div class ="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password"  id="typePassword"> <label class="input_label">Password</label>
+                </div>
+
+
+                <div class="mb-3">
+                    <h6 id="error" style="color:red;"></h6>
+                    <!-- <h6 id="success" style="color:#1c7600;"></h6> -->
+                </div>
+
+                
+                <button type="submit" class="btn" onclick="signUpData()"><span>Register<i class="fas fa-long-arrow-alt-right ml-2"></i></span></button>
+
+                <!-- <div class="btn">
+                    <button id="login-btn" onclick="signUpData()">Sign Up</button>                    
+                </div> -->
+
+                <div class="login-register">
+                    <p>Already have an account? <a href="../templates/login.html" class="login-link">Login</a></p>
+                </div>
+        
+        </div>
+    </div>
+
+    <script src="../static/js/sign_up.js"></script>
+
+    <!-- script to add icons to input boxes -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+
+

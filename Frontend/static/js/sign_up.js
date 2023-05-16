@@ -15,12 +15,13 @@ function signUpData(){
 
     success:function(data) {
       console.log(data)
-      window.location.href = "http://"+window.location.hostname+":5500/Frontend/templates/login_page.html";
+      window.location.href = "http://"+window.location.hostname+":5500/Frontend/templates/login.html";
       
     },
     error: function(xhr){
- 
-      // alert (xhr.responseJSON.detail)
+      console.log(xhr.responseJSON.detail)
+      document.getElementById("error").style.display = "block";       
+      document.getElementById('error').innerHTML =xhr.responseJSON.detail;
     }
   })            
   

@@ -3,10 +3,22 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(../../asserts/db2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* background: url(../../asserts/shipment_2.jpg) no-repeat; */
+    /* background-size: cover;
+    background-position: center; */
+    
 }
+
+.mainheader h1{
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  display:flex;
+  justify-content:center;
+  color: #3a0404;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 
 header{
     position: fixed;
@@ -14,17 +26,18 @@ header{
     left:0;
     width: 100%;
     padding: 20px 100px;
-    background: rgb(150, 145, 145);
+    background: rgba(103, 138, 172, 0.767);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 1;
 }
 
 .logo{
     font-size: 2em;
     color: #fff;
     user-select: none;
+    width: 100px;
 }
 
 .navigation a{
@@ -41,25 +54,42 @@ header{
     width: 130px;
     height:50px;
     background: transparent;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff;
     outline: none;
-    border-radius: 6px;
+    border-radius: 6px; */
     cursor: pointer;
-    font-size: 1.1em;
-    color: #fff;
+    font-size: 1.2em;
+    color: #ffffff;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
 }
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
 
-.navigation .btnLogin-popup:hover{
+.navigation a:hover::after{
+  transform: scaleX(1);
+}
+
+/* .navigation .btnLogin-popup:hover{
     background: #fff;
     color:bisque;
-}
+} */
 
 .main{
     display:flex;
-    gap:75px;
+    gap:50px;
 }
 
 .container {
@@ -71,13 +101,30 @@ header{
 
 }
 
-
 .container img {
   width: 100%;
   height: auto;
+  border-radius: 20px;
+  background-color: #3a0404;
 }
 
 
+.imgbtn button {
+  background-color: rgb(232, 220, 245);
+  color: rgb(14, 13, 13);
+  font-weight: bold;
+  border-radius: 6px;
+  border:2px solid #4c4eaf;
+  height: 30px;
+  margin: 10px;
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.imgbtn button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 /* Style the button and place it in the middle of the container/image */
 .container .btn {

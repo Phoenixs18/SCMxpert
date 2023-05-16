@@ -21,10 +21,11 @@ class Login(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
-    
+
 
 class TokenData(BaseModel):
     username: str = None
+
 
 class NewShipment(BaseModel):
     invoice_no: int
@@ -68,4 +69,8 @@ class Shipments(Document):
     NDC_no = IntField()
     batch_id = IntField()
     serial_no_of_goods = IntField()
+
+# class forgotpwd(BaseModel):
+#     username: str
+  
 
