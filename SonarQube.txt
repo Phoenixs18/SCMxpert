@@ -1,0 +1,4 @@
+Sonarqube pwd: Shruti@1998
+--sqp_c414d67ade86142ba83cacba6964894b4ce9d82f
+
+sonar-scanner.bat -D"sonar.projectKey=scmxpertapp" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.token=sqp_c414d67ade86142ba83cacba6964894b4ce9d82f"

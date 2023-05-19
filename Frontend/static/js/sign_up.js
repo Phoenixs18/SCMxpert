@@ -15,8 +15,8 @@ function signUpData(){
 
     success:function(data) {
       console.log(data)
-      window.location.href = "http://"+window.location.hostname+":5500/Frontend/templates/login.html";
-      
+     // window.location.href = "http://"+window.location.hostname+":5500/Frontend/templates/login.html";
+     window.location.href = "http://"+window.location.hostname+":5500/templates/login.html";
     },
     error: function(xhr){
       console.log(xhr.responseJSON.detail)

@@ -13,10 +13,6 @@ from config import verify_password, get_password_hash, oauth2_scheme
 app=FastAPI()
 
 
-# connect(db="SCMXpert", host="localhost", port=27017)
-# connect(db="SCMXpert", host="mongodb+srv://shruti:1QKN3hyur0zCZCjp@cluster0.avltwbb.mongodb.net/?retryWrites=true&w=majority")
-
-
 origins = [
     "http://127.0.0.1:5500",
     "http://localhost:5500", 

@@ -1,5 +1,5 @@
 <!Doctype HTML>
-<html>
+<html lang="en">
 <head>
         <!-- calling Bootstrap and API packages into HTML pages -->
         <meta charset="UTF-8">
@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="../static/css/device_data_stream.css">
         <!-- <link rel="stylesheet" href="../static/css/Home.css"> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <title>Data Stream</title>
     </head>
     <!-- checks if the token is valid -->
     <body>
@@ -23,6 +25,7 @@
                 <button type="submit" class="button" id="btn" onclick="devicedata()">Load Data</button>
             </div>
             <table class="styled-table">
+                <caption>All streaming data</caption>
                 <thead>
                     <tr>
                         <th>Battery Level</th>

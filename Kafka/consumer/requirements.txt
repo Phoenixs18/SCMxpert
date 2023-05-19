@@ -1,0 +1,6 @@
+kafka-python
+sockets
+python-jose
+mongoengine==0.26.0
+python-dotenv==0.21.1
+pydantic==1.10.5

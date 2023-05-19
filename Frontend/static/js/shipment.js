@@ -8,7 +8,7 @@ async function createShipment(){
         var shipment_description = await shipmentDescription
     } else {
         shipment_description = ''
-        alert ("no special character in shipment Description")
+        alert ("No special character in shipment Description")
     }
     let route_details = document.querySelector("#route_det ")
     var route_values = route_details.options[route_details.selectedIndex].value;
@@ -22,7 +22,7 @@ async function createShipment(){
     }
     else {
         PO_number = null
-        alert("Type Six digit for the po_number")
+        alert("Type Six digit for the PO_number")
     }
     let delivery_no = document.querySelector("#del_no").value      
     let NDC_no = document.querySelector("#ndc_no").value
@@ -31,37 +31,38 @@ async function createShipment(){
 
     $.ajax({
     
-    url:"http://"+window.location.hostname+":8000/shipment",
-    type:"POST",
-    headers:{"Authorization": 'Bearer ' + localStorage.getItem('access_token'),
-},
-    contentType:"application/json",
-    data:JSON.stringify({
-       
-        invoice_no:Invoice_no,
-        container_no:container_no,
-        shipment_description:shipment_description,
-        route_details:route_values,
-        goods_type:goods_values,
-        device:device,
-        expected_delivery_date:expected_delivery_date,
-        PO_number:PO_number,
-        delivery_no:delivery_no,
-        NDC_no:NDC_no,
-        batch_id:batch_id,
-        serial_no_of_goods:Serial_no_of_goods,
-    }),
-    success:function(data) {
-
-     window.location.href = "http://"+window.location.hostname+":5500/../../Frontend/templates/dashboard.html";
-        return(data)
-    },
-    error:function(xhr, ajaxOptions, thrownError){
-        alert("fill all details")
-    }
+        url:"http://"+window.location.hostname+":8000/shipment",
+        type:"POST",
+        headers:{"Authorization": 'Bearer ' + localStorage.getItem('access_token')},
+                        contentType:"application/json",
+        data:JSON.stringify({
+            invoice_no:Invoice_no,
+            container_no:container_no,
+            shipment_description:shipment_description,
+            route_details:route_values,
+            goods_type:goods_values,
+            device:device,
+            expected_delivery_date:expected_delivery_date,
+            PO_number:PO_number,
+            delivery_no:delivery_no,
+            NDC_no:NDC_no,
+            batch_id:batch_id,
+            serial_no_of_goods:Serial_no_of_goods}),
+        success:function(data) {
+             console.log(data)
+               // window.location.href = "../../Frontend/templates/dashboard.html";
+               
+                alert("Shipment created!")
+             window.location.href = "../templates/dashboard.html";
+            // return(data)
+        },
+        error:function(xhr, ajaxOptions, thrownError){
+            alert("fill all details")
+        }
     })
 }
 function logout(){
     localStorage.removeItem('access_token')
-    window.location.href = "../../../Frontend/login.html"
-  }
+    window.location.href = "../../templates/login.html"
+    // window.location.href = "http://"+window.location.hostname+":5500/../../Frontend/templates/login.html";
+}

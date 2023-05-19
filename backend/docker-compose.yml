@@ -1,0 +1,62 @@
+version: '3'
+services:
+    frontend:
+      image: frontend:v1
+      ports:
+        - "5500:80"
+      depends_on:
+        - backend
+      networks:
+        - SCM
+
+    backend:
+      image: backend:v1
+      ports:
+        - "8000:8000"
+      networks:
+        - SCM
+    
+    zookeeper:
+      image: docker.io/bitnami/zookeeper:3.8
+      ports:
+        - 2181:2181
+      environment:
+        - ALLOW_ANONYMOUS_LOGIN=yes
+        
+    kafka:
+      image: docker.io/bitnami/kafka:3.2
+      ports:
+        - 9092:9092
+      environment:
+        - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+        - ALLOW_PLAINTEXT_LISTENER=yes
+      healthcheck:
+        test: ["CMD-SHELL", "kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --list"]
+        interval: 30s
+        timeout: 30s
+        retries: 3
+        start_period: 30s
+      depends_on:
+          - zookeeper
+    
+    server:
+      image: server:v1
+      ports:
+        - 5050:5050
+    
+    producer:
+      image: producer:v1
+      depends_on:
+        kafka:
+          condition: service_healthy
+
+    consumer:
+      image: consumer:v1
+      depends_on:
+        kafka:
+          condition: service_healthy
+        
+
+networks:
+  SCM:
+    driver: bridge

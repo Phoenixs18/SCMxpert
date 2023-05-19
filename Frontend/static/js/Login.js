@@ -16,8 +16,9 @@ function authorise(){
      success:function(data) {
        console.log(data.access_token)
         localStorage.setItem("access_token", data.access_token)  
-        window.location.href = "http://"+window.location.hostname+":5500/../../Frontend/templates/dashboard.html"
-     
+        //window.location.href = "http://"+window.location.hostname+":5500/Frontend/templates/dashboard.html";
+        window.location.href = "http://"+window.location.hostname+":5500/templates/dashboard.html"
+
        
       },
       error: function(xhr, ajaxOptions, thrownError){

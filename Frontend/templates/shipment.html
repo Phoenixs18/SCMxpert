@@ -1,9 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/css/shipment.css">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+    <title>Create Shipment</title>
+  </head>
+
+
 <body> 
     <header>
       <img class="logo" src="../asserts/SCMXpert logo.png" alt="SCMXpert logo" style="width:200px;height:65px;">
@@ -11,24 +19,26 @@
           <a href="../templates/dashboard.html" button class="btn"><span class="icon"><ion-icon name="home"></ion-icon></span> Home</a>
           <a href="../templates/login.html" button class="btn"><span class="icon"><ion-icon name="log-out"></ion-icon></span> Logout</a>
       </nav>
-  </header>
+    </header>
 
   <div class="container">
-    <form action="">
+    
 
         <!-- <h1> <img class="ship logo" src="delivery-truck.png" alt="Shipping container">Shipping Details</h1> -->
         <h1>
-          <img class="ship_logo" src="../asserts/delivery-truck.png"></i>
+          <img class="ship_logo" src="../asserts/delivery-truck.png" alt="Shipping container"></i>
           Shipping Details </h1>
 
-
-
          <div class="details">
-            <label><b>Shipment/Invoice Number:</b></label> <input type ="id" id="inv_no" class="info" placeholder="Shipment/Invoice Number"><br>
-            <label><b>Container Number:</b></label> <input type="id" id="cont_no" class="info" placeholder="Container Number"><br>
-            <label><b>Shipment Description:</b></label> <input type="text" id="ship_des" class="info" placeholder="Enter Your Description"><br>
+            <label><b>Shipment/Invoice Number:</b></label> 
+            <input type ="id" id="inv_no" class="info" placeholder="Shipment/Invoice Number"><br>
+            <label><b>Container Number:</b></label> 
+            <input type="id" id="cont_no" class="info" placeholder="Container Number"><br>
+            <label><b>Shipment Description:</b></label> 
+            <input type="text" id="ship_des" class="info" placeholder="Enter your Description"><br>
 
-            <label><b>Route Details:</b></label> <select class="dropdown" id="route_det"> <option value="Select Route">Select Route</option> 
+            <label><b>Route Details:</b></label> <select class="dropdown" id="route_det"> 
+              <option value="Select Route">Select Route</option> 
               <option><a href="The English Channel">The English Channel</a></option>
               <option><a href="Panama Canal">Panama Canal</a></option>
               <option><a href="Suez Canal">Suez Canal</a></option></select><br>
@@ -46,7 +56,7 @@
               <option><a href="1157">1157</a></option></select><br>
 
             <label><b>Expected Delivery Date:</b></label> <input type="date" class="info" id="exp_del_d" placeholder="Expected Delivery Date"><br>
-            <label><b>PO Number:</b></label> <input type="id" class="info" id="po_no" placeholder="PONumber"><br>
+            <label><b>PO Number:</b></label> <input type="id" class="info" id="po_no" placeholder="Enter 6 digit PONumber"><br>
             <label><b>Delivery Number:</b></label> <input type="id" class="info" id="del_no" placeholder="DeliveryNumber"><br>
 
             <label><b>NDC Number:</b></label> <input type="id" class="info" id="ndc_no" placeholder="NDC No"><br>
@@ -59,7 +69,7 @@
             <button type="reset" class="button" id="cancelbtn">Cancel</button>
          </div>
         
-</form>
+    
   </div>
 
   
